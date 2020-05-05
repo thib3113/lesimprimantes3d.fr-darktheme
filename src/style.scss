@@ -1,0 +1,521 @@
+@import "_variables";
+
+
+@-moz-document url-prefix("https://www.lesimprimantes3d.fr/forum") {
+    .ipsApp .ipsNotificationCount, .ipsBadge_positive, .cStreamFilter > li > a.cStreamFilter_active, .ipsTooltip, .cProfileRepScore_positive, .ui-datepicker-today, .ipsComposeArea_editorPaste {
+        background: $blue_background;
+    }
+    
+    .ipsItemStatus.ipsItemStatus_large {
+        background: $blue_background;
+        
+        &.ipsItemStatus_read {
+            background: $blue_background;
+        }
+    }
+    
+    .cCalendar td.cCalendar_today, .cCalendarWeek div.cCalendar_today, .cGalleryExif_data li span, .ipsTooltip {
+        background: $blue_background;
+    }
+    
+    #ipsMultiQuoter, .ipsWidget_inner .ipsPad, ul:not(.ipsMenu_keyNav) .ipsMenu_item:not(.ipsMenu_itemClicked):not(.ipsMenu_itemDisabled) a:not(.ipsMenu_itemInline):hover {
+        background: $black_background;
+    }
+    
+    .ipsMenu_item {
+        &[data-selected] {
+            a, span {
+                background: $black_background;
+            }
+        }
+        
+        &.ipsMenu_hover {
+            background: $black_background;
+        }
+    }
+    
+    .ipsCommentCount, a:hover.ipsSideMenu_item, .cPollVoteBar, .commentContent, .ipsMenu_headerBar, .ipsMenu_footerBar, .ipsDataList.ipsDataList_zebra .ipsDataItem:not(.ipsDataItem_selected):not(.ipsModerated):not(.ipsDataItem_new):not(.ipsDataItem_success):not(.ipsDataItem_warning):not(.ipsDataItem_error):not(.ipsDataItem_info):not(.ipsDataItem_status):nth-child(even), .ipsTable_zebra tbody tr:nth-child(even):not(.ipsTable_highlight):not(.ipsModerated), .cCalendar td.cCalendar_nonDate, .ipsSticky, .ipsImageAttach_thumb, .ipsDialog_title, .ipsDialog > div, .cBestAnswerIndicator_off, #elDownloadsSubmit .ipsAttachment_dropZone {
+        background: $black_background;
+    }
+    
+    .ipsMenu, .ipsBox:not(.ipsBox_transparent):not(.ipsModerated), .ipsEmbeddedOther, .cStreamFilter, #elSearchWrapper.cSearchExpanded, .ipsTabs_panel, #elProfileStats, .ipsTable.ipsMatrix thead th, .ipsPad, .ipsSideMenu_item:not(.ipsSideMenu_itemActive) a:hover, a.ipsSideMenu_item:not(.ipsSideMenu_itemActive):hover, span.ipsSideMenu_item:not(.ipsSideMenu_itemActive):hover, .ui-datepicker, .cGalleryLightbox_info, .ipsSelectTree_placeholder, .ipsSelectTree_nodes, .ipsSelectTree, .ipsPageHead_barText, .cke_wysiwyg_div, #elLeaderboard_app, #elLeaderboard_time {
+        background: #171D28;
+    }
+    
+    .ipsNavBar_secondary, .ipsDialog > div, .ipsDrawer_list[data-action="back"] a, .ipsComposeArea_dropZone, .ipsTable th, #elBlogHeaderStats {
+        background: #1A212D;
+    }
+    
+    .ipsImage[data-src]:not([data-loaded]), .ipsComposeArea_editor, .ipsComposeArea_dummy, .ipsDrawer_menu, .ipsDrawer_close {
+        background: #131822;
+    }
+    
+    .cMessage_active {
+        background: $black_background !important;
+    }
+    
+    .ipsType_pageTitle, .ipsType_sectionHead {
+        color: $white;
+    }
+    
+    .ipsBreadcrumb > ul {
+        li a, > li {
+            color: $white;
+        }
+    }
+    
+    .ipsMenu_item > {
+        a:not(.ipsMenu_itemInline), span:not(.ipsMenu_itemInline) {
+            color: $white;
+        }
+    }
+    
+    .ipsPager_type {
+        color: $white;
+    }
+    
+    .ipsPager {
+        .ipsPager_prev a:after, .ipsPager_next a:after, .ipsPager_prev a:after {
+            color: $white;
+        }
+    }
+    
+    .cStreamFilter h3, .ipsSideMenu_title, .ipsType_pageTitle, .ipsDialog_title, .ipsDialog_close, .ipsApp .ipsDataItem_selected, .ipsTabs_activeItem:hover {
+        color: $white;
+    }
+    
+    .ipsStreamItem_snippet .ipsType_richText, .ipsComposeArea_dummy {
+        color: #8D9AA6;
+    }
+    
+    .ipsFieldRow_required {
+        color: $blue_background;
+    }
+    
+    .ipsTooltip {
+        &.ipsTooltip_bottom:after {
+            border-color: transparent transparent $blue_background transparent;
+        }
+        
+        &.ipsTooltip_top:after {
+            border-color: $blue_background transparent transparent transparent;
+        }
+    }
+    
+    .ipsApp .ipsButton_link {
+        &.ipsFollow, &.ipsPromote {
+            background: #1A212D;
+            border: 1px solid #171D28;
+            color: #677585;
+        }
+    }
+    
+    html[dir="ltr"] .ipsFollow .ipsCommentCount:after {
+        border-color: transparent #171D28 transparent transparent;
+    }
+    
+    .ipsButtonBar .ipsButtonRow li > {
+        a, button, span {
+            background: $black_background;
+            color: $white;
+        }
+    }
+    
+    .ipsMenu_title, .ui-datepicker-header, .ui-datepicker td a:hover, .ipsButtonRow li {
+        background: $black_background;
+        color: $white;
+    }
+    
+    .ipsFollow .ipsCommentCount {
+        background: #171D28;
+        color: $white;
+    }
+    
+    .ipsHovercard, #elSearchExpanded, .ipsAlert, .ipsAttachLink[data-fileid]:not(.ipsAttachLink_image), iframe[data-embedContent], #elGallerySubmit_imageUploader .ipsAttachment_fileList .ipsImageAttach {
+        background: #1A212D;
+        border: 1px solid #1A212D;
+    }
+    
+    iframe[data-embedContent].ipsEmbed_finishedLoading {
+        background-color: #1A212D;
+    }
+    
+    .ipsHovercard_stemTop .ipsHovercard_stem {
+        border-color: #1A212D transparent transparent transparent;
+        
+        &:before {
+            border-color: #1A212D transparent transparent transparent;
+        }
+    }
+    
+    .ipsHovercard_stemBottom .ipsHovercard_stem {
+        border-color: transparent transparent #1A212D transparent;
+        
+        &:before {
+            border-color: transparent transparent #1A212D transparent;
+        }
+    }
+    
+    #elSearchExpanded .ipsMenu_title {
+        background: $black_background;
+        border: 1px solid $black_background;
+    }
+    
+    .ipsMenu {
+        &.ipsMenu_bottomCenter {
+            &:before, &:after {
+                border-color: transparent transparent #1A212D transparent;
+            }
+        }
+        
+        &.ipsMenu_bottomRight {
+            &:before, &:after {
+                border-color: transparent transparent #1A212D transparent;
+            }
+        }
+        
+        &.ipsMenu_bottomLeft {
+            &:before, &:after {
+                border-color: transparent transparent #1A212D transparent;
+            }
+        }
+        
+        &.ipsMenu_topCenter {
+            &:before, &:after {
+                border-color: #1A212D transparent transparent transparent;
+            }
+        }
+        
+        &.ipsMenu_topRight {
+            &:before, &:after {
+                border-color: #1A212D transparent transparent transparent;
+            }
+        }
+        
+        &.ipsMenu_topLeft {
+            &:before, &:after {
+                border-color: #1A212D transparent transparent transparent;
+            }
+        }
+    }
+    
+    html[dir="ltr"] {
+        .ipsStream_withTimeline .ipsStreamItem {
+            &.ipsStreamItem_contentBlock:before, &:after {
+                border-color: transparent #1A212D transparent transparent;
+            }
+        }
+        
+        .ipsCommentCount:after {
+            border-color: transparent $black_background transparent transparent;
+        }
+        
+        .ipsComposeArea_withPhoto .ipsComposeArea_editor:before {
+            border-color: transparent #131822 transparent transparent;
+        }
+    }
+    
+    .ui-datepicker th {
+        background: #1A212D;
+        color: $white;
+        text-shadow: none;
+    }
+    
+    .ipsPagination:not(.ipsPagination_mini) {
+        .ipsPagination_last a, .ipsPagination_next a {
+            background: #1A212D;
+            color: $white;
+            text-shadow: none;
+        }
+    }
+    
+    .ipsDataList_readStatus .ipsDataItem:not(.ipsDataItem_unread):not(.ipsDataItem_selected):not(.ipsModerated), .ipsPagination.ipsPagination_mini a {
+        background: #1A212D;
+        color: $white;
+        text-shadow: none;
+    }
+    
+    .ipsButtonRow li > {
+        a, button, span {
+            background: #1A212D;
+            color: $white;
+            text-shadow: none;
+        }
+    }
+    
+    .ipsPagination:not(.ipsPagination_mini) {
+        .ipsPagination_prev a, .ipsPagination_page a, .ipsPagination_first a {
+            background: #1A212D;
+            color: $white;
+            text-shadow: none;
+        }
+    }
+    
+    .ipsSideMenu_itemActive a, a.ipsSideMenu_itemActive, span.ipsSideMenu_itemActive {
+        background: #1A212D;
+        color: $white;
+        text-shadow: none;
+    }
+    
+    .ipsSideMenu_withChecks .ipsSideMenu_item > input[type="checkbox"]:checked ~ {
+        a, span {
+            background: #1A212D;
+            color: $white;
+            text-shadow: none;
+        }
+    }
+    
+    .ipsSideMenu_withRadios .ipsSideMenu_item > input[type="radio"]:checked ~ {
+        a, span {
+            background: #1A212D;
+            color: $white;
+            text-shadow: none;
+        }
+    }
+    
+    .ipsDialog .ipsDialog_loading {
+        background-color: #1A212D;
+    }
+    
+    .ipsMenu_headerBar, .ipsDrawer_itemParent > h4 {
+        border-bottom: 1px solid #1A212D;
+    }
+    
+    .ipsDrawer_list > li {
+        > a:not(.ipsButton), &:not(.ipsDrawer_itemParent) > a:not(.ipsButton) {
+            border-bottom: 1px solid #1A212D;
+        }
+    }
+    
+    .ipsDrawer_itemParent > h4 {
+        border-top: 1px solid #131822;
+    }
+    
+    .ipsDrawer_list > li {
+        > a:not(.ipsButton), &:not(.ipsDrawer_itemParent) > a:not(.ipsButton) {
+            border-top: 1px solid #131822;
+        }
+    }
+    
+    .ipsMenu_footerBar {
+        border-top: 1px solid #1A212D;
+    }
+    
+    .ipsTabs {
+        border-top: 2px solid #1A212D;
+    }
+    
+    .ipsMenu_sep, .ipsComposeArea_attachments {
+        border-top: 1px solid $black_background;
+    }
+    
+    .ipsDataItem, .ipsApp .ipsButton_veryLight {
+        border-color: $black_background;
+    }
+    
+    .ipsTabs_panels.ipsTabs_contained, .ipsBox.ipsModerated, .ipsTabs.ipsTabs_contained {
+        border-color: #1A212D;
+    }
+    
+    .ipsBox, .ipsMenu, .ipsStreamItem.ipsStreamItem_contentBlock {
+        border: 1px solid #1A212D;
+    }
+    
+    html[dir] .ipsButton_split > {
+        .ipsButton.ipsButton_link, li > .ipsButton.ipsButton_link {
+            border: 1px solid #1A212D;
+        }
+    }
+    
+    .cNexusPurchase .cNexusPurchase_image, .ipsNoThumb {
+        background: transparent;
+        border: 1px solid #1a212d;
+    }
+    
+    .ipsSelectTree {
+        border: 1px solid $blue_background;
+    }
+    
+    html[dir="ltr"] .cMessage_members > ol > li {
+        border-right: 2px solid $black_background;
+    }
+    
+    .ipsBadge_neutral, .ipsBadge_style6 {
+        background: $white;
+        color: $black_background;
+    }
+    
+    .ipsApp .ipsButtonBar .ipsPagination {
+        .ipsPagination_page a, .ipsPagination_next a, .ipsPagination_prev a, .ipsPagination_first a, .ipsPagination_last a {
+            background: #111824;
+            color: $white;
+            text-shadow: none;
+        }
+    }
+    
+    .ipsTabs_activeItem {
+        background: #111824;
+        color: $white;
+        text-shadow: none;
+    }
+    
+    html[dir="ltr"] .ipsReact_blurb:not(.ipsHide) + .ipsReact_types {
+        border-left: 1px solid $black_background;
+    }
+    
+    .ipsButtonBar .ipsPagination .ipsPagination_page.ipsPagination_active a, .ipsPagination .ipsPagination_page.ipsPagination_active a, .ipsTable.ipsMatrix .ipsMatrix_subHeader {
+        background: $blue_background;
+        color: $white;
+    }
+    
+    .ipsComment:not(.ipsModerated) .ipsComment_header {
+        background: #111824;
+        border-top: 1px solid #111824;
+    }
+    
+    .ipsItemStatus {
+        width: 40px;
+        
+        &.ipsItemStatus_read {
+            opacity: 0.1;
+        }
+    }
+    
+    .ipsRepBadge_positive {
+        color: $blue_background !important;
+        
+        &:hover {
+            color: $blue_background !important;
+        }
+    }
+    
+    .ipsCommentUnreadSeperator {
+        border-color: $blue_background;
+    }
+    
+    .ipsStream .ipsStreamItem_contentType {
+        background: #1A212D;
+        border: 2px solid #1A212D;
+    }
+    
+    #elSearchExpanded .ipsSideMenu_list {
+        background: #1A212D;
+        border: 1px solid #1A212D;
+    }
+    
+    .ipsReact_button {
+        filter: opacity(0.3);
+    }
+    
+    .ipsQuote {
+        background: #171D28;
+        border-radius: 3px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #677585;
+    }
+    
+    .ipsQuote_citation {
+        background: #171D28;
+        color: #677585;
+        border-radius: 3px;
+    }
+    
+    .ipsQuote .ipsQuote_citation a {
+        color: #677585;
+    }
+    
+    .ipsReact_reactCount {
+        border: 1px solid #111824;
+        
+        > a > span {
+            &:last-child {
+                background: #111824;
+                color: $white;
+            }
+            
+            background: #111824;
+        }
+        
+        background: #111824;
+    }
+    
+    .ipsReact_types ul {
+        background: #111824;
+    }
+    
+    body {
+        &.ipsApp_noTouch .ipsReact_types:hover .ipsReact_button, &:not(.ipsApp_noTouch) .ipsReact_types.ipsReact_types_active .ipsReact_button {
+            background: #111824;
+        }
+    }
+    
+    .ipsReactOverview ul img {
+        border: 2px solid #111824;
+    }
+    
+    .ipsDataItem_subList {
+        display: none;
+    }
+    
+    .ipsImage_thumbnailed {
+        border: none;
+    }
+    
+    .ipsCustomInput > span {
+        background: #1A212D;
+        border-color: $blue_background;
+        opacity: 0.2;
+    }
+    
+    .ipsApp {
+        .ipsField_autocomplete, textarea {
+            background: #131822;
+            color: #677585;
+            border: 1px solid #171D28;
+        }
+        
+        input {
+            &[type="text"], &[type="password"], &[type="datetime"], &[type="datetime-local"], &[type="date"], &[type="month"], &[type="time"], &[type="week"], &[type="number"], &[type="email"], &[type="url"], &[type="search"], &[type="tel"] {
+                background: #131822;
+                color: #677585;
+                border: 1px solid #171D28;
+            }
+        }
+        
+        .ipsField_dummy {
+            background: #131822;
+            color: #677585;
+            border: 1px solid #171D28;
+        }
+    }
+    
+    .ipsTruncate + .ipsTruncate_more {
+        color: #677585;
+        font-size: 13px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    
+    body.unloaded #ipsEmbedLoading {
+        background: transparent;
+    }
+    
+    @keyframes dummy_anim {
+        0% {
+            /* set the starting colour */
+            background-color: #1A212D;
+        }
+        
+        50% {
+            /* slightly lighter/darker colour to create pulsing effect */
+            background-color: #212a39;
+        }
+        
+        99% {
+            /* return to starting colour */
+            background-color: #1A212D;
+        }
+    }
+}
