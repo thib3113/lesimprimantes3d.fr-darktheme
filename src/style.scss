@@ -1,12 +1,12 @@
 @import "_variables";
-
+ 
 
 .ipsApp .ipsNotificationCount, .ipsBadge_positive, .cStreamFilter > li > a.cStreamFilter_active, .ipsTooltip, .cProfileRepScore_positive, .ui-datepicker-today, .ipsComposeArea_editorPaste {
     background: $blue_background;
 }
 
 .ipsItemStatus.ipsItemStatus_large {
-    background: $blue_background;
+    background: $blue_background; 
     
     &.ipsItemStatus_read {
         background: $blue_background;

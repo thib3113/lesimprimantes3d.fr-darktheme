@@ -2,18 +2,20 @@
   "name": "lesimprimantes3d.fr-darktheme",
   "version": "1.0.0",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/thib3113/lesimprimantes3d.fr-darktheme.git"
+    "type": "git",
+    "url": "https://github.com/thib3113/lesimprimantes3d.fr-darktheme.git"
   },
   "author": "thibaut severac <thib3113@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "ts-node scripts/build.ts"
+    "build": "ts-node scripts/build.ts",
+    "watch": "chokidar \"src/**/*.scss\" -c \"npm run build\""
   },
   "dependencies": {
     "@types/node": "^13.13.4",
     "@types/node-sass": "^4.11.0",
     "axios": "^0.19.2",
+    "chokidar-cli": "^2.1.0",
     "node-sass": "^4.14.1",
     "ts-node": "^8.10.1",
     "typescript": "^3.8.3"
