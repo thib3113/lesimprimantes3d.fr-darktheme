@@ -43,7 +43,7 @@ ${result.css.toString().split('\n').join(`\n${''.padStart(indentWidth)}`)}
 `
         const CSSChrome = 
 `${CSSHeader}
-${result.css.toString().split('\n').join(`\n${''.padStart(indentWidth)}`)}
+${result.css.toString()}
 `
 
         //generate chrome, firefox and usertyle.css
