@@ -1,0 +1,9 @@
+language: node_js
+dist: trusty
+
+branches:
+  only:
+  - master
+
+script:
+    - npm build && npm deploy

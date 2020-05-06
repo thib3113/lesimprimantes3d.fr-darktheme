@@ -21,6 +21,7 @@ const options: Options = {
 const CSSHeader = 
 `/************
  file generated for and by project ${packageJson.repository?.url}
+ version ${packageJson.version}
 ************/`
 
 const urlForum = "https://www.lesimprimantes3d.fr/forum";
