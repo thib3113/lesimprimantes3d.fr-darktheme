@@ -1,12 +1,13 @@
 language: node_js
 node_js: node
+os: linux
+dist: xenial
+
 
 branches:
   only:
   - master
 
-deploy:
-  provider: script
-  script: 
+script:
     - npm run build
     - npm run deploy
