@@ -10,7 +10,8 @@
   "scripts": {
     "build": "ts-node scripts/build.ts",
     "deploy": "ts-node scripts/deploy.ts",
-    "watch": "chokidar \"src/**/*.scss\" -c \"npm run build\""
+    "watch": "chokidar \"src/**/*.scss\" -c \"npm run build\"",
+    "test": "exit 0"
   },
   "userstyles": {
     "id": 183250,
