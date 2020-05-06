@@ -5,6 +5,6 @@ branches:
   only:
   - master
 
-script:
+deploy:
     - npm run build
     - npm run deploy
