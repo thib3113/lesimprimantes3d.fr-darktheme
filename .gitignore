@@ -7,3 +7,5 @@ build
 yarn.lock
 package-lock.json
 node_modules
+.idea
+IPB_default

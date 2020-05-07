@@ -173,55 +173,6 @@ const main = async (): Promise<void> => {
     Object.entries(data).forEach(([name, value]) => {
         styleData.append(name, value);
     });
-    
-    // axiosInstance.interceptors.response.use(
-    //     response => {
-
-    //         console.log(
-    //             `Response from ${response.config.method} ${response.config.url}${
-    //                 response.config.params
-    //                     ? `?${Object.keys(response.config.params)
-    //                           .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(response.config.params[k])}`)
-    //                           .join('&')}`
-    //                     : ''
-    //             } with code ${response.status} ${response.statusText}`
-    //         );
-    //         console.log(`headers : ${JSON.stringify(response.headers)}`);
-    //         console.log(`headers sent : %O`, response.request._header);
-    //         console.log(`payload : %O `, response.data);
-    //         return response;
-    //     },
-    //     error => {
-    //         if (error.response) {
-    //             const rep = error.response;
-    //             console.log(
-    //                 `Response from ${rep.config.method} ${rep.config.url}${
-    //                     rep.config.params
-    //                         ? `?${Object.keys(rep.config.params)
-    //                               .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(rep.config.params[k])}`)
-    //                               .join('&')}`
-    //                         : ''
-    //                 } with code ${rep.status} ${rep.statusText}`
-    //             );
-    //             console.log(`headers : %O`, rep.headers);
-    //             console.log(`payload : %O`, rep.data);
-    //         } else {
-    //             if (error.isAxiosError) {
-    //                 console.log(
-    //                     `Response from ${error.config.method} ${error.config.url}${
-    //                         error.config.params
-    //                             ? `?${Object.keys(error.config.params)
-    //                                   .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(error.config.params[k])}`)
-    //                                   .join('&')}`
-    //                             : ''
-    //                     } with code ${error.code} ${error.message}`
-    //                 );
-    //             }
-    //         }
-
-    //         return Promise.reject(error);
-    //     }
-    // );
 
     console.log('update the style');
     // console.log(styleData);
