@@ -18,7 +18,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn version --patch --no-commit-hooks && git add package.json"
+      "//pre-commit": "yarn version --patch --no-commit-hooks && git add package.json"
     }
   },
   "dependencies": {
