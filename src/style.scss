@@ -566,9 +566,9 @@ body {
     border: 2px solid #111824;
 }
 
-.ipsDataItem_subList {
-    display: none;
-}
+//.ipsDataItem_subList {
+//    display: none;
+//}
 
 .ipsImage_thumbnailed {
     border: none;
@@ -629,8 +629,20 @@ body.unloaded #ipsEmbedLoading {
 
 @keyframes dummy_anim {
     0% {
+        background-color: #f8f8f8;
+    }
+    50% {
+        background-color: #f2f2f2;
+    }
+    99% {
+        background-color: #f8f8f8;
+    }
+}
+
+@keyframes dummy_anim {
+    0% {
         /* set the starting colour */
-        background-color: #1a212d;
+        background-color: $area_background_dark;
     }
 
     50% {
@@ -640,7 +652,7 @@ body.unloaded #ipsEmbedLoading {
 
     99% {
         /* return to starting colour */
-        background-color: #1a212d;
+        background-color: $area_background_dark;
     }
 }
 
@@ -731,4 +743,24 @@ iframe[data-embedContent].ipsEmbed_finishedLoading {
     .ipsAttachLink_title, .ipsAttachLink[data-fileid]:not(.ipsAttachLink_image) {
         color: $text_color;
     }
+}
+
+@media screen and (max-width:767px) {
+    .cPost.ipsComment:not( .ipsComment_selected):not( .ipsModerated) .cAuthorPane {
+        background: $area_background_dark;
+    }
+}
+
+.ipsGiphy_thumb, .ipsAreaBackground_light, .ipsMap, .ipsStream_comment {
+    background: $area_background_dark;
+}
+
+html[dir="ltr"] .ipsStream_comment:before {
+    left: 0;
+    border-color: transparent $area_background_dark transparent transparent;
+}
+
+html[dir="rtl"] .ipsStream_comment:before {
+    right: 0;
+    border-color: transparent transparent transparent $area_background_dark;
 }
