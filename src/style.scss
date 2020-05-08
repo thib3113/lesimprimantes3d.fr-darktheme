@@ -84,7 +84,7 @@ span.ipsSideMenu_item:not(.ipsSideMenu_itemActive):hover,
 .cke_wysiwyg_div,
 #elLeaderboard_app,
 #elLeaderboard_time {
-    background: #171d28;
+    background: $background_alt;
 }
 
 .ipsNavBar_secondary,
@@ -172,13 +172,13 @@ span.ipsSideMenu_item:not(.ipsSideMenu_itemActive):hover,
     &.ipsFollow,
     &.ipsPromote {
         background: #1a212d;
-        border: 1px solid #171d28;
+        border: 1px solid $background_alt;
         color: #677585;
     }
 }
 
 html[dir='ltr'] .ipsFollow .ipsCommentCount::after {
-    border-color: transparent #171d28 transparent transparent;
+    border-color: transparent $background_alt transparent transparent;
 }
 
 .ipsButtonBar .ipsButtonRow li > {
@@ -199,7 +199,7 @@ html[dir='ltr'] .ipsFollow .ipsCommentCount::after {
 }
 
 .ipsFollow .ipsCommentCount {
-    background: #171d28;
+    background: $background_alt;
     color: $white;
 }
 
@@ -211,6 +211,7 @@ iframe[data-embedContent],
 #elGallerySubmit_imageUploader .ipsAttachment_fileList .ipsImageAttach {
     background: #1a212d;
     border: 1px solid #1a212d;
+    color: $light_button_font
 }
 
 iframe[data-embedContent].ipsEmbed_finishedLoading {
@@ -520,7 +521,7 @@ html[dir='ltr'] .ipsReact_blurb:not(.ipsHide) + .ipsReact_types {
 }
 
 .ipsQuote {
-    background: #171d28;
+    background: $background_alt;
     border-color: #677585;
     border-radius: 3px;
     border-style: solid;
@@ -528,7 +529,7 @@ html[dir='ltr'] .ipsReact_blurb:not(.ipsHide) + .ipsReact_types {
 }
 
 .ipsQuote_citation {
-    background: #171d28;
+    background: $background_alt;
     border-radius: 3px;
     color: #677585;
 }
@@ -584,7 +585,7 @@ body {
     .ipsField_autocomplete,
     textarea {
         background: #131822;
-        border: 1px solid #171d28;
+        border: 1px solid $background_alt;
         color: #677585;
     }
 
@@ -603,14 +604,14 @@ body {
         &[type='search'],
         &[type='tel'] {
             background: #131822;
-            border: 1px solid #171d28;
+            border: 1px solid $background_alt;
             color: #677585;
         }
     }
 
     .ipsField_dummy {
         background: #131822;
-        border: 1px solid #171d28;
+        border: 1px solid $background_alt;
         color: #677585;
     }
 }
@@ -716,7 +717,7 @@ iframe[data-embedContent].ipsEmbed_finishedLoading {
 #elTopContributors_content .ipsPad_half,
 #ipsLayout_header nav,
 .ipsNavBar_primary:not(.ipsNavBar_noSubBars) > ul:before,
-.ipsButtonBar {
+.ipsButtonBar, .ipsAreaBackground {
     background: $tab_background;
 }
 
@@ -747,20 +748,30 @@ iframe[data-embedContent].ipsEmbed_finishedLoading {
 
 @media screen and (max-width:767px) {
     .cPost.ipsComment:not( .ipsComment_selected):not( .ipsModerated) .cAuthorPane {
-        background: $area_background_dark;
+        background: $area_background_light;
     }
 }
 
 .ipsGiphy_thumb, .ipsAreaBackground_light, .ipsMap, .ipsStream_comment {
-    background: $area_background_dark;
+    background: $area_background_light;
 }
 
 html[dir="ltr"] .ipsStream_comment:before {
     left: 0;
-    border-color: transparent $area_background_dark transparent transparent;
+    border-color: transparent $area_background_light transparent transparent;
 }
 
 html[dir="rtl"] .ipsStream_comment:before {
     right: 0;
-    border-color: transparent transparent transparent $area_background_dark;
+    border-color: transparent transparent transparent $area_background_light;
+}
+
+#elProfileTabs_content {
+    background: $background_alt;
+}
+
+font{
+    &[color="#000000"], &[color="black"] {
+        background: $white;
+    }
 }
