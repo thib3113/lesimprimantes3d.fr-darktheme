@@ -18,7 +18,7 @@ const options: Options = {
     // sourceComments: true
 }
 
-const CSSHeader = 
+const CSSHeader =
 `/************
  file generated for and by project ${packageJson.repository?.url}
  version ${packageJson.version}
@@ -30,19 +30,19 @@ const urlForum = "https://www.lesimprimantes3d.fr/forum";
 //check if css_output folder exist
 fs.mkdirSync(cssOutputFolder, { recursive: true });
 
-sass.render(options, (err, result) => { 
+sass.render(options, (err, result) => {
     if(err) {
         throw err;
     }
 
     if(result.css){
-        const CSSUsertyle = 
-`${CSSHeader}
-@-moz-document url-prefix("${urlForum}") {
+        const CSSUsertyle =
+`@-moz-document url-prefix("${urlForum}") {
+${CSSHeader.toString().split('\n').join(`\n${''.padStart(indentWidth)}`)}
 ${result.css.toString().split('\n').join(`\n${''.padStart(indentWidth)}`)}
 }
 `
-        const CSSChrome = 
+        const CSSChrome =
 `${CSSHeader}
 ${result.css.toString()}
 `
