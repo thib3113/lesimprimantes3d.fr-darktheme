@@ -1,7 +1,7 @@
-import sass, { Options } from 'node-sass'
+import sass, { Options } from 'node-sass';
 import path from 'path';
 import fs from 'fs';
-import packageJson from '../package.json'
+import packageJson from '../package.json';
 
 const scssFilename = path.join(__dirname, '..', 'src', 'style.scss');
 
@@ -16,36 +16,37 @@ const options: Options = {
     indentType: 'space',
     indentWidth
     // sourceComments: true
-}
+};
 
-const CSSHeader =
-`/************
+const CSSHeader = `/************
  file generated for and by project ${packageJson.repository?.url}
- version ${packageJson.version}
-************/`
+ version ${packageJson.version}${process.env.CI ? '' : '-dev'}
+************/`;
 
-const urlForum = "https://www.lesimprimantes3d.fr/forum";
-
+const urlForum = 'https://www.lesimprimantes3d.fr/forum';
 
 //check if css_output folder exist
 fs.mkdirSync(cssOutputFolder, { recursive: true });
 
 sass.render(options, (err, result) => {
-    if(err) {
+    if (err) {
         throw err;
     }
 
-    if(result.css){
-        const CSSUsertyle =
-`@-moz-document url-prefix("${urlForum}") {
-${CSSHeader.toString().split('\n').join(`\n${''.padStart(indentWidth)}`)}
-${result.css.toString().split('\n').join(`\n${''.padStart(indentWidth)}`)}
+    if (result.css) {
+        const CSSUsertyle = `@-moz-document url-prefix("${urlForum}") {
+${CSSHeader.toString()
+    .split('\n')
+    .join(`\n${''.padStart(indentWidth)}`)}
+${result.css
+    .toString()
+    .split('\n')
+    .join(`\n${''.padStart(indentWidth)}`)}
 }
-`
-        const CSSChrome =
-`${CSSHeader}
+`;
+        const CSSChrome = `${CSSHeader}
 ${result.css.toString()}
-`
+`;
 
         //generate chrome, firefox and usertyle.css
         fs.writeFileSync(path.join(cssOutputFolder, 'chrome.css'), CSSChrome);
@@ -53,8 +54,7 @@ ${result.css.toString()}
         fs.writeFileSync(path.join(cssOutputFolder, 'userstyle.css'), CSSUsertyle);
 
         console.log(`css builded in folder ${cssOutputFolder}`);
-
     } else {
         throw new Error('no css generated');
     }
- });
+});

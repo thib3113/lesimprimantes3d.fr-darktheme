@@ -770,8 +770,8 @@ html[dir="rtl"] .ipsStream_comment:before {
     background: $background_alt;
 }
 
-font{
-    &[color="#000000"], &[color="black"] {
-        background: $white;
+font, span{
+    &[color="#000000"], &[color="black"], &[style="color:#000000;"] {
+        background: $white !important;
     }
 }
